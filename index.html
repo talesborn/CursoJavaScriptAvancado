@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a id="navTitle" class="navbar-brand" href="index.html">
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="form-inline">
+            <div class="form-group">
+                <input type="text" class="form-control" id="desc" placeholder="Descrição"/>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="quant" placeholder="Quantidade"/>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="valor" placeholder="Valor"/>
+            </div>
+            <span id="btnUpdate" style="display:none;">
+                <span id="inputIDUpdate"></span>
+                <button onclick="updateData();" class="btn btn-default">Salvar</button>
+                <button onclick="resetForm();" class="btn btn-default">Cancelar</button>
+            </span>
+            <span id="btnAdd">
+                <button onclick="addData();" class="btn btn-default">Add</button>
+                <button onclick="resetForm();" class="btn btn-default">Reset</button>
+                <button onclick="deleteList();" class="btn btn-default">Deletar Lista</button>
+            </span>
+        </div>
+        <span id="errors" style="display: none;"></span>
+        <table id="listTable" class="table"/>
+    </div>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <h4 class="text-center text-success">Total: <span id="totalValue"></span></h4>
+        </div>
+    </nav>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
